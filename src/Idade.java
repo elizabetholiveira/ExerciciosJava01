@@ -12,17 +12,18 @@ public class Idade {
         byte dia = in.nextByte();
 
         int idadeanos = 2023 - ano;
-        int idadeano = ano*365;
+        int idadeano = idadeanos*365;
         int idademes = mes*30;
-        int idademeses = idademes*ano;
+        int idademeses = (idadeanos*12) + mes;
         int idadedias = idadeano + idademes + dia;
 
         //Estou com muita dificuldade em pensar em como faço isso dar certo...
+        //Ok, conseguir fazer isso dar certo na parte da contagem final, ao menos de forma arredondada...
 
         System.out.print("Muito obrigado! Uau! Você tem ");
         System.out.println(idadeanos + " anos de idade!");
-        System.out.println("Você já viveu " + idademeses + " meses!");
-        System.out.println("Ou seja, você já viveu " + idadedias + " dias! Isso é incrível!");
+        System.out.println("Você já viveu cerca de " + idademeses + " meses!");
+        System.out.println("Ou seja, você já viveu cerca de " + idadedias + " dias! Isso é incrível!");
         System.out.println("Tenha um bom dia!");
 
     }
